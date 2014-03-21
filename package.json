@@ -1,0 +1,27 @@
+{
+  "name": "moody",
+  "version": "0.0.1",
+  "description": "Moody is a library for defining running states such as a gamestate.",
+  "main": "index.js",
+  "dependencies": {
+    "lodash": "~2.4.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://dannyfritz@github.com/dannyfritz/moody.git"
+  },
+  "keywords": [
+    "gamestate",
+    "state"
+  ],
+  "author": "Danny Fritz",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/dannyfritz/moody/issues"
+  },
+  "homepage": "https://github.com/dannyfritz/moody"
+}
