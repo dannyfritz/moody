@@ -6,7 +6,10 @@
   "dependencies": {
     "lodash": "~2.4.1"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "grunt": "^0.4.4",
+    "grunt-eslint": "^0.3.2"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
