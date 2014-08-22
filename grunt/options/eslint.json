@@ -1,0 +1,3 @@
+{
+  "target": ["lib/**.js", "grunt/**.js", "index.js"]
+}

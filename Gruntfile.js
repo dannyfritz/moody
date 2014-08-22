@@ -1,11 +1,7 @@
-module.exports = function(grunt) {
-	grunt.initConfig({
-		eslint: {
-			target: ['lib/**.js']
-		}
-	});
+var path = require('path');
 
-	grunt.loadNpmTasks('grunt-eslint');
-	
-	grunt.registerTask('default', ['eslint']);
+module.exports = function(grunt) {
+	require('load-grunt-config')(grunt, {
+		configPath: path.join(__dirname, 'grunt/options')
+	});
 };

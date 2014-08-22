@@ -4,7 +4,6 @@
 		"node": true
 	},
 	"rules": {
-		"quotes": [2, "single"],
-		"block-scoped-var": [2]
+		"quotes": [2, "single"]
 	}
 }
