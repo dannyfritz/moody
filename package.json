@@ -1,9 +1,12 @@
 {
   "name": "moody",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Moody is a library for defining running states such as a gamestate.",
   "main": "index.js",
-  "files": ["index.js", "lib"],
+  "files": [
+    "index.js",
+    "lib"
+  ],
   "dependencies": {},
   "devDependencies": {
     "grunt": "^0.4.4",
