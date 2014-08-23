@@ -7,12 +7,22 @@
     "index.js",
     "lib"
   ],
-  "dependencies": {},
-  "devDependencies": {
-    "grunt": "^0.4.4",
-    "grunt-eslint": "^0.3.2",
-    "load-grunt-config": "^0.13.1",
+  "scripts": {
+    "test": "npm run lint && npm run unittest && npm run coverage",
+    "lint": "eslint lib test",
+    "unittest": "tape test/*.js | tap-spec",
+    "coverage": "browserify -t coverify test/moody-test.js --bare | node | coverify --quiet"
+  },
+  "dependencies": {
     "lodash": "^2.4.1"
+  },
+  "devDependencies": {
+    "browserify": "^5.10.1",
+    "coverify": "^1.0.7",
+    "eslint": "^0.7.4",
+    "sinon": "^1.10.3",
+    "tap-spec": "^0.2.1",
+    "tape": "^2.14.0"
   },
   "repository": {
     "type": "git",
