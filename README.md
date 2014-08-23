@@ -45,8 +45,8 @@ var state = {
   }
 };
 moody.push(state);
-moody.execute('say');
-// => 'How are you  mom?!'
+moody.execute('say', 'mom');
+// => 'How are youmom?!'
 ```
 
 ### moody.switch(state, ...)
