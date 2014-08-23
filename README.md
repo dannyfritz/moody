@@ -55,8 +55,8 @@ Remove the current state from the stack and add the new state. Any additional ar
 ### moody.current()
 Return the current state.
 
-# Inspiration
+## Inspiration
 Inspiration for this library is from [vrld](https://github.com/vrld)'s [hump.gamestate](https://github.com/vrld/hump/blob/master/gamestate.lua)
 
-# License
+## License
 MIT
