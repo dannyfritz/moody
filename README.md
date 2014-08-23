@@ -2,7 +2,7 @@
 
 # Moody
 
-Moody is a library for managing different running states in a stack.
+Moody is a library for managing different running states in a stack. Don't like the mood? Why not add a new one to the stack for a new vibe?
 
 ## Install
 ``` sh
@@ -51,7 +51,7 @@ var state = {
 };
 moody.push(state);
 moody.execute('say', 'mom');
-// => 'How are youmom?!'
+// => 'How are you mom?!'
 ```
 
 ### moody.switch(state, ...)
