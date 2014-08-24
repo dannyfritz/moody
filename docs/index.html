@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<head>
+	<title></title>
+</head>
+<body>
+	<header></header>
+	<nav>
+	<ul>
+	
+		<li><a href="#module-moody">moody</a></li>
+		<ul>
+		
+			<li><a href="#class-moody">moody</a></li>
+			<ul>
+			
+				<li><a href="#item-states">states</a></li>
+			
+			
+				<li><a href="#item-callCallback">callCallback</a></li>
+			
+				<li><a href="#item-current">current</a></li>
+			
+				<li><a href="#item-execute">execute</a></li>
+			
+				<li><a href="#item-getArguments">getArguments</a></li>
+			
+				<li><a href="#item-pop">pop</a></li>
+			
+				<li><a href="#item-push">push</a></li>
+			
+				<li><a href="#item-switch">switch</a></li>
+			
+			
+			</ul>
+		
+		</ul>
+	
+	</ul>
+</nav>
+
+	<main>
+		
+			<div class="scriby-module" id="module-moody">
+	<div class="scriby-module-title">
+		<h1>moody</h1>
+	</div>
+	<div class="scriby-module-classes">
+		
+			<div class="scriby-class" id="class-moody">
+	<div class="scriby-class-title">
+		<h2>moody</h2>
+	</div>
+	<div class="scriby-class-file">lib\moody.js:11</div>
+	<div class="scriby-class-namespace"></div>
+	
+	
+	<div class="scriby-class-description">moody is a library for defining running states such as a gamestate.
+Example states of a game would be menu, game, and credits.</div>
+	<div class="scriby-class-params">
+	
+	</div>
+	<div class="scriby-class-items">
+		<div class="scriby-class-properties">
+		
+			<div class="scriby-item scriby-property" id="item-states">
+	<div class="scriby-item-title">
+		<h3>states</h3>
+	</div>
+	<div class="scriby-item-file">lib\moody.js:21</div>
+	<div class="scriby-item-since"></div>
+	
+	<div class="scriby-item-itemtype">property</div>
+	<div class="scriby-item-private">private</div>
+	
+	<div class="scriby-item-bubbles"></div>
+	
+	
+	<div class="scriby-item-type">Array</div>
+	<div class="scriby-item-default"></div>
+	<div class="scriby-item-description">This Array holds all the current states.</div>
+	<div class="scriby-item-params">
+	
+	</div>
+	<div class="scriby-item-return">
+	
+	
+	</div>
+</div>
+
+		
+		</div>
+		<div class="scriby-class-methods">
+		
+			<div class="scriby-item scriby-method" id="item-callCallback">
+	<div class="scriby-item-title">
+		<h3>callCallback</h3>
+	</div>
+	<div class="scriby-item-file">lib\moody-utils.js:7</div>
+	<div class="scriby-item-since"></div>
+	
+	<div class="scriby-item-itemtype">method</div>
+	<div class="scriby-item-private">private</div>
+	
+	<div class="scriby-item-bubbles"></div>
+	
+	
+	<div class="scriby-item-type"></div>
+	<div class="scriby-item-default"></div>
+	<div class="scriby-item-description"></div>
+	<div class="scriby-item-params">
+	
+		<div class="scriby-param">
+	<div class="scriby-param-name">source</div>
+	<div class="scriby-param-type">Object</div>
+	<div class="scriby-param-description">Object bound to &#x60;this&#x60;</div>
+	
+	
+</div>
+
+	
+		<div class="scriby-param">
+	<div class="scriby-param-name">callbackNAme</div>
+	<div class="scriby-param-type">String</div>
+	<div class="scriby-param-description"></div>
+	
+	
+</div>
+
+	
+		<div class="scriby-param">
+	<div class="scriby-param-name">args</div>
+	<div class="scriby-param-type">Array</div>
+	<div class="scriby-param-description"></div>
+	
+	<div class="scriby-param-optional">optional</div>
+	
+	
+</div>
+
+	
+	</div>
+	<div class="scriby-item-return">
+	
+	
+	</div>
+</div>
+
+		
+			<div class="scriby-item scriby-method" id="item-current">
+	<div class="scriby-item-title">
+		<h3>current</h3>
+	</div>
+	<div class="scriby-item-file">lib\moody.js:30</div>
+	<div class="scriby-item-since"></div>
+	
+	<div class="scriby-item-itemtype">method</div>
+	<div class="scriby-item-private"></div>
+	
+	<div class="scriby-item-bubbles"></div>
+	
+	
+	<div class="scriby-item-type"></div>
+	<div class="scriby-item-default"></div>
+	<div class="scriby-item-description">Returns the current state.</div>
+	<div class="scriby-item-params">
+	
+	</div>
+	<div class="scriby-item-return">
+	
+		<div class="scriby-return-type">Object</div>
+		<div class="scriby-return-description">currentState</div>
+	
+	
+	</div>
+</div>
+
+		
+			<div class="scriby-item scriby-method" id="item-execute">
+	<div class="scriby-item-title">
+		<h3>execute</h3>
+	</div>
+	<div class="scriby-item-file">lib\moody.js:103</div>
+	<div class="scriby-item-since"></div>
+	
+	<div class="scriby-item-itemtype">method</div>
+	<div class="scriby-item-private"></div>
+	
+	<div class="scriby-item-bubbles"></div>
+	
+	
+	<div class="scriby-item-type"></div>
+	<div class="scriby-item-default"></div>
+	<div class="scriby-item-description">Calls the function denoted by &#x60;functionName&#x60; on the current state.
+
+If the value is not a function it returns the value it maps to.</div>
+	<div class="scriby-item-params">
+	
+		<div class="scriby-param">
+	<div class="scriby-param-name">functionName</div>
+	<div class="scriby-param-type">String</div>
+	<div class="scriby-param-description">The name of the function to be called on the
+	current state.</div>
+	
+	
+</div>
+
+	
+		<div class="scriby-param">
+	<div class="scriby-param-name">argument</div>
+	<div class="scriby-param-type">Mixed</div>
+	<div class="scriby-param-description">Arguments to pass to the function.</div>
+	
+	<div class="scriby-param-optional">optional</div>
+	
+	
+	<div class="scriby-param-multiple">multiple</div>
+	
+</div>
+
+	
+	</div>
+	<div class="scriby-item-return">
+	
+	
+	</div>
+</div>
+
+		
+			<div class="scriby-item scriby-method" id="item-getArguments">
+	<div class="scriby-item-title">
+		<h3>getArguments</h3>
+	</div>
+	<div class="scriby-item-file">lib\moody-utils.js:21</div>
+	<div class="scriby-item-since"></div>
+	
+	<div class="scriby-item-itemtype">method</div>
+	<div class="scriby-item-private">private</div>
+	
+	<div class="scriby-item-bubbles"></div>
+	
+	
+	<div class="scriby-item-type"></div>
+	<div class="scriby-item-default"></div>
+	<div class="scriby-item-description"></div>
+	<div class="scriby-item-params">
+	
+		<div class="scriby-param">
+	<div class="scriby-param-name">callback</div>
+	<div class="scriby-param-type">Function</div>
+	<div class="scriby-param-description"></div>
+	
+	
+</div>
+
+	
+		<div class="scriby-param">
+	<div class="scriby-param-name">args</div>
+	<div class="scriby-param-type">Array</div>
+	<div class="scriby-param-description"></div>
+	
+	<div class="scriby-param-optional">optional</div>
+	
+	
+</div>
+
+	
+	</div>
+	<div class="scriby-item-return">
+	
+	
+	</div>
+</div>
+
+		
+			<div class="scriby-item scriby-method" id="item-pop">
+	<div class="scriby-item-title">
+		<h3>pop</h3>
+	</div>
+	<div class="scriby-item-file">lib\moody.js:63</div>
+	<div class="scriby-item-since"></div>
+	
+	<div class="scriby-item-itemtype">method</div>
+	<div class="scriby-item-private"></div>
+	
+	<div class="scriby-item-bubbles"></div>
+	
+	
+	<div class="scriby-item-type"></div>
+	<div class="scriby-item-default"></div>
+	<div class="scriby-item-description">Remove the current state from the stack.
+Calls the &#x60;leave&#x60; callback on the state being removed.</div>
+	<div class="scriby-item-params">
+	
+	</div>
+	<div class="scriby-item-return">
+	
+		<div class="scriby-return-type">Object</div>
+		<div class="scriby-return-description">poppedState</div>
+	
+	
+	</div>
+</div>
+
+		
+			<div class="scriby-item scriby-method" id="item-push">
+	<div class="scriby-item-title">
+		<h3>push</h3>
+	</div>
+	<div class="scriby-item-file">lib\moody.js:40</div>
+	<div class="scriby-item-since"></div>
+	
+	<div class="scriby-item-itemtype">method</div>
+	<div class="scriby-item-private"></div>
+	
+	<div class="scriby-item-bubbles"></div>
+	
+	
+	<div class="scriby-item-type"></div>
+	<div class="scriby-item-default"></div>
+	<div class="scriby-item-description">Push a new state onto the stack.
+
+Calls the &#x60;enter&#x60; callback on the state being added.</div>
+	<div class="scriby-item-params">
+	
+		<div class="scriby-param">
+	<div class="scriby-param-name">state</div>
+	<div class="scriby-param-type">Object</div>
+	<div class="scriby-param-description"></div>
+	
+	
+</div>
+
+	
+		<div class="scriby-param">
+	<div class="scriby-param-name">argument</div>
+	<div class="scriby-param-type">Mixed</div>
+	<div class="scriby-param-description">Arguments to pass to the &#x60;enter&#x60; callback.</div>
+	
+	<div class="scriby-param-optional">optional</div>
+	
+	
+	<div class="scriby-param-multiple">multiple</div>
+	
+</div>
+
+	
+	</div>
+	<div class="scriby-item-return">
+	
+		<div class="scriby-return-type">Mixed</div>
+		<div class="scriby-return-description">enterReturn</div>
+	
+	
+	</div>
+</div>
+
+		
+			<div class="scriby-item scriby-method" id="item-switch">
+	<div class="scriby-item-title">
+		<h3>switch</h3>
+	</div>
+	<div class="scriby-item-file">lib\moody.js:79</div>
+	<div class="scriby-item-since"></div>
+	
+	<div class="scriby-item-itemtype">method</div>
+	<div class="scriby-item-private"></div>
+	
+	<div class="scriby-item-bubbles"></div>
+	
+	
+	<div class="scriby-item-type"></div>
+	<div class="scriby-item-default"></div>
+	<div class="scriby-item-description">In with the new state. Out with the old state.
+
+Pop the current state and replace with a new one.
+Calls the &#x60;enter&#x60; callback on new state.
+Calls the &#x60;leave&#x60; callback on the previous state.</div>
+	<div class="scriby-item-params">
+	
+		<div class="scriby-param">
+	<div class="scriby-param-name">toState</div>
+	<div class="scriby-param-type">Object</div>
+	<div class="scriby-param-description">State to be switched in.</div>
+	
+	
+</div>
+
+	
+		<div class="scriby-param">
+	<div class="scriby-param-name">argument</div>
+	<div class="scriby-param-type">Mixed</div>
+	<div class="scriby-param-description">Arguments to pass to the &#x60;enter&#x60; callback.</div>
+	
+	<div class="scriby-param-optional">optional</div>
+	
+	
+	<div class="scriby-param-multiple">multiple</div>
+	
+</div>
+
+	
+	</div>
+	<div class="scriby-item-return">
+	
+		<div class="scriby-return-type">Mixed</div>
+		<div class="scriby-return-description">enterReturn</div>
+	
+	
+	</div>
+</div>
+
+		
+		</div>
+		<div class="scriby-class-events">
+		
+		</div>
+	</div>
+</div>
+
+		
+	</div>
+</div>
+
+		
+	</main>
+	<footer></footer>
+</body>

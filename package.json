@@ -9,9 +9,11 @@
   ],
   "scripts": {
     "test": "npm run lint && npm run unittest && npm run coverage",
+    "build": "npm run documentation",
     "lint": "eslint lib test",
     "unittest": "tape test/*.js | tap-spec",
-    "coverage": "browserify -t coverify test/moody-test.js --bare | node | coverify --quiet"
+    "coverage": "browserify -t coverify test/moody-test.js --bare | node | coverify --quiet",
+    "documentation": "scriby lib"
   },
   "dependencies": {
     "lodash": "^2.4.1"
@@ -20,6 +22,7 @@
     "browserify": "^5.10.1",
     "coverify": "^1.0.7",
     "eslint": "^0.7.4",
+    "scriby": "~0.0.5",
     "sinon": "^1.10.3",
     "tap-spec": "^0.2.1",
     "tape": "^2.14.0"
