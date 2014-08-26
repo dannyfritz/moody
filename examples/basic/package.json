@@ -1,0 +1,11 @@
+{
+  "name": "basic",
+  "version": "1.0.0",
+  "description": "A basic Moody example.",
+  "main": "index.js",
+  "scripts": {
+    "test": "node ."
+  },
+  "author": "Danny Fritz",
+  "license": "MIT"
+}
