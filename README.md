@@ -28,17 +28,17 @@ moody.push(state, 'mom');
 // => 'Hi mom!'
 ```
 
-### moody.pop(...)
-Remove the current state from the stack. Any additional args are passed to the state's leave callback.
+### moody.pop()
+Remove the current state from the stack.
 ``` js
 var state = {
-  leave: function(name) {
-    console.log('Bye '+ name + '!')
+  leave: function() {
+    console.log('Bye!')
   }
 };
 moody.push(state);
-moody.pop('mom');
-// => 'Bye mom!'
+moody.pop();
+// => 'Bye!'
 ```
 
 ### moody.execute(functionName, ...)

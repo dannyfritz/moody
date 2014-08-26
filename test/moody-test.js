@@ -110,7 +110,7 @@ test('moody', function (t) {
 
 	t.test('switch', function (st) {
 		var moody = newMoody();
-		var leave = sinon.stub().returns('A beautiful return!');
+		var leave = sinon.stub();
 		var state = {
 			leave: leave
 		};
@@ -126,8 +126,7 @@ test('moody', function (t) {
 		st.equal(_.size(moody.states), 1, 'moody.states has 1 state after moody.push');
 		st.ok(leave.calledOnce, 'leave called after moody.switch.');
 		st.ok(enter.calledOnce, 'enter called after moody.switch');
-		st.equal(result.enter, 'A very pretty return!', 'moody.switch returned leave callback value');
-		st.equal(result.leave, 'A beautiful return!', 'moody.switch returned enter callback value');
+		st.equal(result, 'A very pretty return!', 'moody.switch returned leave callback value');
 		st.end();
 	});
 

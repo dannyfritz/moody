@@ -1,0 +1,16 @@
+{
+  "name": "basic",
+  "version": "1.0.0",
+  "description": "A basic Moody example.",
+  "main": "index.js",
+  "scripts": {
+    "test": "node ."
+  },
+  "author": "Danny Fritz",
+  "license": "MIT",
+  "dependencies": {
+    "chalk": "^0.5.1",
+    "lodash": "^2.4.1",
+    "prompt": "^0.2.13"
+  }
+}
