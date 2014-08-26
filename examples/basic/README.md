@@ -2,5 +2,6 @@
 
 To run, type:
 ``` sh
-node .
+$ npm install
+$ node .
 ```

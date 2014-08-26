@@ -1,5 +1,5 @@
 {
-  "name": "basic",
+  "name": "Basic",
   "version": "1.0.0",
   "description": "A basic Moody example.",
   "main": "index.js",
@@ -7,5 +7,8 @@
     "test": "node ."
   },
   "author": "Danny Fritz",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "chalk": "^0.5.1"
+  }
 }
