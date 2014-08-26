@@ -7,5 +7,10 @@
     "test": "node ."
   },
   "author": "Danny Fritz",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "chalk": "^0.5.1",
+    "lodash": "^2.4.1",
+    "prompt": "^0.2.13"
+  }
 }

@@ -2,7 +2,8 @@
 
 To run, type:
 ``` sh
-node .
+$ npm install
+$ node .
 ```
 
 The program will prompt you for information.
