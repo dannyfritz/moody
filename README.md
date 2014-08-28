@@ -54,7 +54,7 @@ moody.execute('say', 'mom');
 // => 'How are you mom?!'
 ```
 
-### moody.switch(state, ...)
+### moody.swap(state, ...)
 Remove the current state from the stack and add the new state. Any additional args are passed to the new state's enter callback.
 
 ### moody.current()

@@ -9,7 +9,7 @@
   ],
   "scripts": {
     "test": "npm run lint && npm run unittest && npm run coverage",
-    "lint": "eslint lib test",
+    "lint": "eslint lib",
     "unittest": "tape test/*.js | tap-spec",
     "coverage": "browserify -t coverify test/moody-test.js --bare | node | coverify --quiet"
   },

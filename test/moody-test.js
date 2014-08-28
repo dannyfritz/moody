@@ -108,7 +108,7 @@ test('moody', function (t) {
 		st.end();
 	});
 
-	t.test('switch', function (st) {
+	t.test('swap', function (st) {
 		var moody = newMoody();
 		var leave = sinon.stub();
 		var state = {
@@ -122,21 +122,21 @@ test('moody', function (t) {
 		moody.push(state);
 		st.equal(_.size(moody.states), 1, 'moody.states has 1 state after moody.push');
 
-		var result = moody.switch(anotherState);
+		var result = moody.swap(anotherState);
 		st.equal(_.size(moody.states), 1, 'moody.states has 1 state after moody.push');
-		st.ok(leave.calledOnce, 'leave called after moody.switch.');
-		st.ok(enter.calledOnce, 'enter called after moody.switch');
-		st.equal(result, 'A very pretty return!', 'moody.switch returned leave callback value');
+		st.ok(leave.calledOnce, 'leave called after moody.swap.');
+		st.ok(enter.calledOnce, 'enter called after moody.swap');
+		st.equal(result, 'A very pretty return!', 'moody.swap returned leave callback value');
 		st.end();
 	});
 
-	t.test('switch errors', function (st) {
+	t.test('swap errors', function (st) {
 		st.throws(function () {
 				var moody = newMoody();
-				moody.switch(1);
+				moody.swap(1);
 			},
-			'Switched state must be an object.',
-			'moody.switch arg must be an object.'
+			'swaped state must be an object.',
+			'moody.swap arg must be an object.'
 		);
 		st.end();
 	});
