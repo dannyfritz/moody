@@ -1,1 +1,2 @@
-var gameState = require('gameState');
+var gameState = require('./gameState');
+console.log('hi');

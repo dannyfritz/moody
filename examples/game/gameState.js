@@ -1,2 +1,3 @@
-var gameState = require('..')();
-module.exports(gameState);
+//Normally would be require('moody')();
+var gameState = require('../..')();
+module.exports = gameState;
