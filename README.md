@@ -2,6 +2,8 @@
 
 # Moody
 
+[![Gitter](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/dannyfritz/moody?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+
 Moody is a library for managing different running states in a stack. Don't like the mood? Why not add a new one to the stack for a new vibe?
 
 ## Install
