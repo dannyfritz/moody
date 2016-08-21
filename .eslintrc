@@ -8,7 +8,6 @@
 		"func-names": [2],
 		"block-scoped-var": [2],
 		"func-style": [2, "declaration"],
-		"space-in-brackets": [1, "always"],
 		"max-nested-callbacks": [2, 2],
 		"max-depth": [2, 2],
 		"max-params": [2, 3],
