@@ -1,6 +1,6 @@
 {
   "name": "moody",
-  "version": "0.2.1",
+  "version": "0.3.0",
   "description": "Moody is a library for defining running states such as a gamestate.",
   "main": "index.js",
   "files": [
