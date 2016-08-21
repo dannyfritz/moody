@@ -108,6 +108,35 @@ test('moody', function (t) {
 		st.end();
 	});
 
+	t.test('pause callback', function (st) {
+		var moody = newMoody();
+		var pause = sinon.stub().returns('A beautiful return!');
+		var state = {
+			pause: pause
+		};
+		var dummyState = {}
+
+		moody.push(state);
+		moody.push(dummyState);
+		st.ok(pause.calledOnce, 'pause called after moody.push(dummy).');
+		st.end();
+	});
+
+	t.test('resume callback', function (st) {
+		var moody = newMoody();
+		var resume = sinon.stub().returns('A beautiful return!');
+		var state = {
+			resume: resume
+		};
+		var dummyState = {}
+
+		moody.push(state);
+		moody.push(dummyState);
+		moody.pop()
+		st.ok(resume.calledOnce, 'resume called after moody.pop().');
+		st.end();
+	});
+
 	t.test('swap', function (st) {
 		var moody = newMoody();
 		var leave = sinon.stub();

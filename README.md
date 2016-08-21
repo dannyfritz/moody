@@ -4,7 +4,8 @@
 
 [![Gitter](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/dannyfritz/moody?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 
-Moody is a library for managing different running states in a stack. Don't like the mood? Why not add a new one to the stack for a new vibe?
+Moody is a library for managing different running states in a stack.
+Don't like the mood? Why not add a new one to the stack for a new vibe?
 
 ## Install
 ``` sh
@@ -19,7 +20,9 @@ var moody = newMoody();
 ```
 
 ### moody.push(state, ...)
-Add a new state to the top of the stack. Any additional args are passed to the new state's enter callback.
+Add a new state to the top of the stack.
+Any additional args are passed to the new state's enter callback.
+The previous state will have its pause callback called.
 ``` js
 var state = {
   enter: function(name) {
@@ -32,6 +35,8 @@ moody.push(state, 'mom');
 
 ### moody.pop()
 Remove the current state from the stack.
+Any arguments passed to pop are passed to the resume callback.
+The new state will have its resume callback called.
 ``` js
 var state = {
   leave: function() {
