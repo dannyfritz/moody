@@ -1,24 +1,23 @@
 var test = require('tape');
 var _ = require('lodash');
 var sinon = require('sinon');
-
-var newMoody = require('..');
+var { Moody } = require('../dist')
 
 test('moody', function (t) {
 
 	t.test('constructor', function (st) {
-		st.ok(_.isFunction(newMoody), 'Constructor is a Function');
-		var moody = newMoody();
+		st.ok(_.isFunction(Moody), 'Constructor is a Function');
+		var moody = new Moody();
 		st.ok(_.isObject(moody), 'Constructor returns an object');
 		st.equal(_.size(moody.states), 0, 'moody.states is empty');
 
-		moody = newMoody();
+		moody = new Moody();
 		st.equal(_.size(moody.states), 0, 'new moody.states is empty');
 		st.end();
 	});
 
 	t.test('current', function (st) {
-		var moody = newMoody();
+		var moody = new Moody();
 		var state = {};
 		var anotherState = {};
 
@@ -37,7 +36,7 @@ test('moody', function (t) {
 	});
 
 	t.test('push', function (st) {
-		var moody = newMoody();
+		var moody = new Moody();
 		st.equal(_.size(moody.states), 0, 'moody.states is empty');
 
 		moody.push({});
@@ -49,7 +48,7 @@ test('moody', function (t) {
 	});
 
 	t.test('enter callback', function (st) {
-		var moody = newMoody();
+		var moody = new Moody();
 		var enter = sinon.stub().returns('A beautiful return!');
 		var state = {
 			enter: enter
@@ -63,7 +62,7 @@ test('moody', function (t) {
 
 	t.test('push errors', function (st) {
 		st.throws(function () {
-				var moody = newMoody();
+				var moody = new Moody();
 				moody.push(1);
 			},
 			'Pushed state must be an object.',
@@ -73,7 +72,7 @@ test('moody', function (t) {
 	});
 
 	t.test('pop', function(st) {
-		var moody = newMoody();
+		var moody = new Moody();
 
 		moody.push({});
 		st.equal(_.size(moody.states), 1, 'moody.states has 1 state after moody.push');
@@ -85,7 +84,7 @@ test('moody', function (t) {
 
 	t.test('pop errors', function (st) {
 		st.throws(function () {
-				var moody = newMoody();
+				var moody = new Moody();
 				moody.pop();
 			},
 			'No states to pop.',
@@ -95,7 +94,7 @@ test('moody', function (t) {
 	});
 
 	t.test('leave callback', function (st) {
-		var moody = newMoody();
+		var moody = new Moody();
 		var leave = sinon.stub().returns('A beautiful return!');
 		var state = {
 			leave: leave
@@ -109,7 +108,7 @@ test('moody', function (t) {
 	});
 
 	t.test('pause callback', function (st) {
-		var moody = newMoody();
+		var moody = new Moody();
 		var pause = sinon.stub().returns('A beautiful return!');
 		var state = {
 			pause: pause
@@ -123,7 +122,7 @@ test('moody', function (t) {
 	});
 
 	t.test('resume callback', function (st) {
-		var moody = newMoody();
+		var moody = new Moody();
 		var resume = sinon.stub().returns('A beautiful return!');
 		var state = {
 			resume: resume
@@ -138,7 +137,7 @@ test('moody', function (t) {
 	});
 
 	t.test('swap', function (st) {
-		var moody = newMoody();
+		var moody = new Moody();
 		var leave = sinon.stub();
 		var state = {
 			leave: leave
@@ -161,7 +160,7 @@ test('moody', function (t) {
 
 	t.test('swap errors', function (st) {
 		st.throws(function () {
-				var moody = newMoody();
+				var moody = new Moody();
 				moody.swap(1);
 			},
 			'swaped state must be an object.',
@@ -171,7 +170,7 @@ test('moody', function (t) {
 	});
 
 	t.test('execute', function (st) {
-		var moody = newMoody();
+		var moody = new Moody();
 		var method = sinon.stub().returns('I do things!');
 		var state = {
 			method: method
@@ -199,14 +198,14 @@ test('moody', function (t) {
 	});
 
 	t.test('execute empty moody', function (st) {
-		var moody = newMoody();
+		var moody = new Moody();
 
 		t.equal(moody.execute('method'), undefined, 'undefined returned calling execute on an empty moody.');
 		st.end();
 	});
 
 	t.test('execute value', function (st) {
-		var moody = newMoody();
+		var moody = new Moody();
 		var state = {
 			property: 1
 		};
@@ -218,7 +217,7 @@ test('moody', function (t) {
 
 	t.test('execute errors', function (st) {
 		st.throws(function () {
-				var moody = newMoody();
+				var moody = new Moody();
 				moody.execute(1);
 			},
 			'functionName must be a String.',
@@ -228,7 +227,7 @@ test('moody', function (t) {
 	});
 
 	t.test('crap callback value', function (st) {
-		var moody = newMoody();
+		var moody = new Moody();
 		var state = {
 			enter: 1,
 			leave: 2
