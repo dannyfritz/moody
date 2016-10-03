@@ -10,7 +10,6 @@
     "pretty": true
   },
   "files": [
-    "typings/index.d.ts",
     "index.ts"
   ]
 }

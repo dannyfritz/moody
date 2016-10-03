@@ -1,20 +1,58 @@
 {
-	"parser": "typescript-eslint-parser",
-	"env": {
-		"browser": true,
-		"node": true
-	},
-	"rules": {
-		"quotes": [2, "single"],
-		"func-names": [2],
-		"block-scoped-var": [2],
-		"func-style": [2, "declaration"],
-		"max-nested-callbacks": [2, 2],
-		"max-depth": [2, 2],
-		"max-params": [2, 3],
-		"max-statements": [1, 30],
-		"no-plusplus": [2],
-		"max-len": [1, 80, 4],
-		"complexity": [1, 10]
-	}
+  "parser": "typescript-eslint-parser",
+  "parserOptions": {
+    "sourceType": "module"
+  },
+  "env": {
+    "browser": true,
+    "commonjs": true,
+    "es6": true,
+    "node": true
+  },
+  "globals": {
+    "DEBUG": false,
+    "PRODUCTION": false
+  },
+  "plugins": [
+    "typescript"
+  ],
+  "extends": "eslint:recommended",
+  "rules": {
+    "comma-dangle": ["error", "always-multiline"],
+    "no-console": "warn",
+    "no-unexpected-multiline": "error",
+    "no-unused-vars": "warn",
+    "valid-jsdoc": "error",
+		# "indent": ["error", 2],
+
+    "consistent-return": "error",
+    "curly": "error",
+    "dot-location": ["error", "property"],
+    "eqeqeq": "error",
+    "no-lone-blocks": "error",
+    "no-loop-func": "error",
+    "no-multi-spaces": "error",
+    "no-native-reassign": "error",
+    "no-sequences": "error",
+    "no-throw-literal": "error",
+
+    "strict": ["error", "global"],
+
+    "arrow-body-style": ["off", "as-needed"],
+    "arrow-parens": "error",
+    "arrow-spacing": "error",
+    "no-confusing-arrow": "error",
+    "no-var": "error",
+    "object-shorthand": "error",
+    "prefer-arrow-callback": "off",
+    "prefer-const": "error",
+    "prefer-template": "error",
+
+    "brace-style": ["error", "allman"],
+    "quotes": "error",
+    "semi": ["error", "never"],
+    "keyword-spacing": "error",
+
+    "typescript/type-annotation-spacing": "error"
+  }
 }
