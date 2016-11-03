@@ -1,6 +1,6 @@
 {
   "name": "moody",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Moody is a library for defining running states such as a gamestate.",
   "main": "dist/index.js",
   "typings": "dist/index.d.ts",
@@ -12,7 +12,9 @@
     "unittest": "npm run build && tape test/*.js | tap-spec"
   },
   "files": [
-    "dist", "README.md", "LICENSE"
+    "dist",
+    "README.md",
+    "LICENSE"
   ],
   "dependencies": {
     "lodash": "^4.15.0"
