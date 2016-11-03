@@ -11,6 +11,9 @@
     "lint": "eslint lib --ext .ts --ext .js",
     "unittest": "npm run build && tape test/*.js | tap-spec"
   },
+  "files": [
+    "dist", "README.md", "LICENSE"
+  ],
   "dependencies": {
     "lodash": "^4.15.0"
   },
